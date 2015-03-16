@@ -30,7 +30,7 @@
     #* Displays a single Review Detail record, in the expanded subtasks list *#
     #macro( reviewDetail $change )
     <span class="gerrit-review" title="$i18n.getText('gerrit.tabpanel.Review')">$i18n.getText('gerrit.tabpanel.Review'): </span>
-    $change.getNumber(),$change.getPatchSet().getNumber()
+    $change.getNumber()/$change.getPatchSet().getNumber(),$change.branch
     <a href="$change.getUrl()" target="gerrit-review-$change.getNumber(),$change.getPatchSet().getNumber()">$change.getSubject()</a>
     -
     #if ($change.isOpen())

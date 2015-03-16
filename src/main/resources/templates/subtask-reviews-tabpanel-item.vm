@@ -57,7 +57,7 @@
     <div class="$openClass $statusClass">
 
     <span class="gerrit-review" title="$i18n.getText('gerrit.tabpanel.Review')">$i18n.getText('gerrit.tabpanel.Review'): </span>
-    $change.number,$change.patchSet.number
+    $change.getNumber()/$change.getPatchSet().getNumber(),$change.branch
     <a href="$change.getUrl()" target="gerrit-review-$change.number,$change.patchSet.number">$change.subject</a>
     -
     #if ($change.isOpen())
